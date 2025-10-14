@@ -32,12 +32,15 @@ fun App(appViewModel: AppViewModel = koinViewModel()) {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Button(onClick = {
-                appViewModel.showNotification()
-            }) {
-                Text("Click me!")
-            }
-
+            Button(onClick = { appViewModel.showBasic() }) { Text("Basic") }
+            Button(onClick = { appViewModel.showSilent() }) { Text("Silent") }
+            Button(onClick = { appViewModel.showBigText() }) { Text("Big Text") }
+            Button(onClick = { appViewModel.showProgress() }) { Text("Progress") }
+            Button(onClick = { appViewModel.showAction() }) { Text("Action") }
+            Button(onClick = { appViewModel.showScheduled() }) { Text("Scheduled (5s)") }
+            Button(onClick = { appViewModel.showImageRich() }) { Text("Image Rich") }
+            Button(onClick = { appViewModel.showTemplate() }) { Text("Template") }
+            Button(onClick = { appViewModel.showMediaPlayer() }) { Text("Media Player") }
         }
     }
 }
